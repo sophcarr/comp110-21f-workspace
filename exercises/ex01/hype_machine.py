@@ -1,5 +1,8 @@
-# TODO: Write docstring here
+"""Sophia the God of Programming."""
 
-# TODO: Initialize __author__ variable here
+__author__ = "730320301"
 
-# TODO: Implement your program logic here
+name: str = input("What is your name? ")
+print(name + " the programming God? ")
+print("Didn't you learn how to program before you could read?")
+print("I bet you did, " + name + ". You look pretty smart to me.")
