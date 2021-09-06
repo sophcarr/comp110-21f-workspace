@@ -16,4 +16,3 @@ while i < len(word):
     i = i + 1
 
 print("Count: " + str(letters_found))
-

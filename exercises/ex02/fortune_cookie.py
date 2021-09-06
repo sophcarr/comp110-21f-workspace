@@ -30,4 +30,4 @@ else:
             else:
                 print("Guess you're not getting a fortune today.")
 
-print("Now, go spread positive vides!")
+print("Now, go spread positive vibes!")
