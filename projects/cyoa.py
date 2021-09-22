@@ -2,14 +2,16 @@
 
 __author__ = "730320301"
 
-player: str = input("Hello, player! What is your name? ")
+player: str = ""
 points: int = 0
 HAT: str = '\U0001F920'
 
 
 def main() -> None:
+    """Main program."""
     global player
     global points
+    player = input("Hello, player! What is your name? ")
     greet()
     print(player + ", do you want to keep playing?")
     print("1) Yes")
@@ -29,22 +31,25 @@ def main() -> None:
         print(player + ", do you want play this game again?")
         print("1) Yes")
         print("2) No.")
-        keep_playing: int = int(input("Enter which number you choose: "))
+        keep_playing = int(input("Enter which number you choose: "))
         points = points + 1
     print("The End!")
     print(f"Final adventure points: {points}")
 
 
 def greet() -> None:
+    """Greeting."""
     print("Hello, " + player + "! This game will ask you a series of questions in order to determine which Disney Princess you are. Choose wisely, and good luck! :)")
 
 
 def add_point(x: int) -> int:
+    """Just to add a point to globals."""
     x = x + 1
     return x
 
 
 def start() -> int:
+    """Pick a weekend activity."""
     global player
     global points
     print(player + ", pick a weekend activity.")
@@ -56,6 +61,7 @@ def start() -> int:
 
 
 def kissing() -> None:
+    """Would you ever smooch a frog?"""
     global player
     global points
     print(player + ", would you ever smooch a frog?")
@@ -73,6 +79,7 @@ def kissing() -> None:
 
 
 def bow() -> None:
+    """Bow and arrow."""
     global player
     global points
     print(player + ", it is pretty obvious your princess soulmate is Merida " + HAT)
@@ -84,6 +91,7 @@ def bow() -> None:
 
 
 def adventure() -> None:
+    """Land or sea?"""
     global player
     global points
     print(player + ", do you like the land or the sea better?")
