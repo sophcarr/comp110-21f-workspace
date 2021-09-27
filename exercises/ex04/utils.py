@@ -4,11 +4,12 @@ __author__ = "730320301"
 
 
 # TODO: Implement your functions here.
-def all(haystack: list[int], needle: int) -> bool:
+def all(needle: int, haystack: list[int]) -> bool:
+    """Matching up lists."""
     i: int = 0
     total: int = 0
     while i < len(haystack):
-        if haystack[i] == needle:
+        if needle == haystack[i]:
             total += 1
         i += 1
     if total == len(haystack):
@@ -18,6 +19,7 @@ def all(haystack: list[int], needle: int) -> bool:
 
 
 def is_equal(x: list[int], y: list[int]) -> bool:
+    """Making sure lists are the same."""
     i: int = 0
     total: int = 0
     if len(x) != len(y):
@@ -33,6 +35,7 @@ def is_equal(x: list[int], y: list[int]) -> bool:
 
 
 def max(input: list[int]) -> int:
+    """Finding the max in a list."""
     i: int = 0
     max: int = input[len(input) - 1]
     if len(input) == 0:
