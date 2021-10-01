@@ -4,12 +4,12 @@ __author__ = "730320301"
 
 
 # TODO: Implement your functions here.
-def all(needle: int, haystack: list[int]) -> bool:
+def all(haystack: list[int], needle: int) -> bool:
     """Matching up lists."""
     i: int = 0
     total: int = 0
     while i < len(haystack):
-        if needle == haystack[i]:
+        if haystack[i] == needle:
             total += 1
         i += 1
     if total == len(haystack):
