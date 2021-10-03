@@ -18,20 +18,21 @@ def only_evens(xs: list[int]) -> list[int]:
 def sub(a_list: list[int], y: int, z: int) -> list[int]:
     """Generating a list from a list."""
     final: list[int] = list()
-    i: int = 1
+    i: int = 0
     while len(a_list) == 0 or y == 0 or z <= 0:
         return final
-    if y < 0:
-        final.append(a_list[0])
-    while i < (len(a_list) - 1):
+    while i < (len(a_list)):
         final.append(a_list[i])
         i += 1
-    if z > len(a_list):
-        final.append(a_list[len(a_list) - 1])
+    if y >= 0:
+        final.pop(0)
+    if z <= len(a_list):
+        final.pop(len(final) - 1)
     return final
 
 
 def concat(x: list[int], y: list[int]) -> list[int]:
+    """Joining lists together."""
     final: list[int] = list()
     i: int = 0
     s: int = 0

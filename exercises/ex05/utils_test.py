@@ -9,8 +9,8 @@ __author__ = "730320301"
 
 def test_only_evens() -> None:
     """Testing only_evens."""
-    xs: list[int] = [2, 3, 4, 5, 6]
-    assert only_evens(xs) == [2, 4, 6]
+    xs: list[int] = [3, 6]
+    assert only_evens(xs) == [6]
 
 
 def test_only_evens_with_negative_numbers() -> None:
