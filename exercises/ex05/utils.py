@@ -21,7 +21,7 @@ def sub(a_list: list[int], y: int, z: int) -> list[int]:
     i: int = 0
     while len(a_list) == 0 or y == 0 or z <= 0:
         return final
-    while i < (len(a_list)):
+    while i < len(a_list):
         final.append(a_list[i])
         i += 1
     if y >= 0:
