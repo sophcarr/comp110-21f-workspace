@@ -7,27 +7,27 @@ __author__ = "730320301"
 
 def only_evens(xs: list[int]) -> list[int]:
     """Finding the even numbers in a list."""
+    final: list[int] = list()
     i: int = 0
     while i < len(xs):
-        if xs[i] % 2 != 0:
-            xs.pop(i)
+        if xs[i] % 2 == 0:
+            final.append(xs[i])
         i += 1
-    return xs
+    return final
 
 
 def sub(a_list: list[int], y: int, z: int) -> list[int]:
     """Generating a list from a list."""
     final: list[int] = list()
-    i: int = 0
-    while len(a_list) == 0 or y == 0 or z <= 0:
+    if len(a_list) == 0 or y > len(a_list) or z <= 0:
         return final
-    while i < len(a_list):
-        final.append(a_list[i])
-        i += 1
-    if y >= 0:
-        final.pop(0)
-    if z <= len(a_list):
-        final.pop(len(final) - 1)
+    if y <= 0:
+        y = 0
+    if z >= len(a_list):
+        z = len(a_list)
+    while y < z:
+        final.append(a_list[y])
+        y += 1
     return final
 
 

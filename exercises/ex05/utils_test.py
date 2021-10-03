@@ -28,25 +28,25 @@ def test_only_evens_edge_case() -> None:
 def test_sub() -> None:
     """Testing sub."""
     a_list: list[int] = [1, 2, 3, 4, 5, 6]
-    y: int = 3
-    z: int = 1
-    assert sub(a_list, y, z) == [2, 3, 4, 5]
+    y: int = 1
+    z: int = 3
+    assert sub(a_list, y, z) == [2, 3]
 
 
 def test_sub_when_neg() -> None:
-    """Testing sub when starting number is negative."""
+    """Testing sub when starting number is negative edge case."""
     a_list: list[int] = [-3, 4, 5]
     y: int = -3
     z: int = 1
-    assert sub(a_list, y, z) == [-3, 4]
+    assert sub(a_list, y, z) == [-3]
 
 
 def test_sub_edge_case() -> None:
-    """Testing edge case for sub when y = 0."""
+    """Testing use case for sub when y = 0."""
     a_list: list[int] = [10, 20, 30, 40]
     y: int = 0
     z: int = 3
-    assert sub(a_list, y, z) == []
+    assert sub(a_list, y, z) == [10, 20, 30]
 
 
 def test_concat() -> None:
