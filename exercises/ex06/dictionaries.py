@@ -8,6 +8,14 @@ __author__ = "730320301"
 def invert(list1: dict[str, str]) -> dict[str, str]:
     """Switching keys with thier corresponding values."""
     list2: dict[str, str] = dict()
+    zzz: dict[str, int] = dict()
+    for key in list1:
+        if list1[key] in zzz:
+            zzz[list1[key]] += 1
+        else:
+            zzz[list1[key]] = 1
+        if zzz[list1[key]] > 1:
+            raise KeyError("There are repeating key values.")
     for key in list1:
         list2[list1[key]] = key
     return list2
@@ -32,6 +40,7 @@ def favorite_color(list1: dict[str, str]) -> str:
 
 
 def count(list1: list[str]) -> dict[str, int]:
+    """Counting lists and putting them in dictionaries."""
     zzz: dict[str, int] = dict()
     for key in list1:
         if key in zzz:
