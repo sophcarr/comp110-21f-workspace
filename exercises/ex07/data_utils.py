@@ -43,11 +43,14 @@ def head(table: dict[str, list[str]], N: int) -> dict[str, list[str]]:
 
     for column in table:
         row: list[str] = []
-        while i < N:
-            row.append(table[column][i])
-            i += 1
-        result[column] = row
-        i = 0
+        if len(table) >= N:
+            while i < N:
+                row.append(table[column][i])
+                i += 1
+            result[column] = row
+            i = 0
+        else:
+            result = table
     return result
 
 
