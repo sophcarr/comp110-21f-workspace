@@ -1,6 +1,7 @@
 """Example of a Point class."""
 from __future__ import annotations
 
+
 class Point:
     x: float
     y: float
